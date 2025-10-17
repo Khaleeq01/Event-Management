@@ -19,6 +19,10 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api/events', eventRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Event Management backend is running!");
+});
+
 // Connect to MongoDB and start server
 mongoose
   .connect(MONGO_URI)
