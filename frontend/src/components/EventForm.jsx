@@ -20,7 +20,7 @@ const EventForm = ({ onEventAdd }) => {
 		e.preventDefault();
 
 		// Create a new event
-		axios.post('http://localhost:5000/api/events', newEvent)
+		axios.post('https://event-management-b07c.onrender.com/api/events', newEvent)
 			.then(response => {
 				onEventAdd(response.data);
 				setNewEvent({ title: '', date: '', reminder: false });
